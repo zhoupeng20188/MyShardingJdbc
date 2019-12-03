@@ -163,7 +163,7 @@ public class IndexController {
         TImageExample.Criteria criteria = tImageExample.createCriteria();
         criteria.andTitleLike("第8%");
 //        tImageExample.or().andTitleLike("第8%");
-        tImageExample.or().andImageIdLessThan(1472252);
+//        tImageExample.or().andImageIdLessThan(1472252);
         return tImageMapper.selectByExample(tImageExample);
     }
 

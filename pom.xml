@@ -16,7 +16,9 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <sharding-sphere.version>4.0.0-RC3</sharding-sphere.version>
+        <!--<sharding-sphere.version>4.0.0-RC3</sharding-sphere.version>-->
+        <sharding-sphere.version>4.0.0-RC2</sharding-sphere.version>
+        <!--<sharding-sphere.version>4.0.0-RC4-SNAPSHOT</sharding-sphere.version>-->
     </properties>
 
     <dependencies>

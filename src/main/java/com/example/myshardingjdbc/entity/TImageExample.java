@@ -115,52 +115,52 @@ public class TImageExample {
             return (Criteria) this;
         }
 
-        public Criteria andImageIdEqualTo(Integer value) {
+        public Criteria andImageIdEqualTo(Long value) {
             addCriterion("image_id =", value, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdNotEqualTo(Integer value) {
+        public Criteria andImageIdNotEqualTo(Long value) {
             addCriterion("image_id <>", value, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdGreaterThan(Integer value) {
+        public Criteria andImageIdGreaterThan(Long value) {
             addCriterion("image_id >", value, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdGreaterThanOrEqualTo(Integer value) {
+        public Criteria andImageIdGreaterThanOrEqualTo(Long value) {
             addCriterion("image_id >=", value, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdLessThan(Integer value) {
+        public Criteria andImageIdLessThan(Long value) {
             addCriterion("image_id <", value, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdLessThanOrEqualTo(Integer value) {
+        public Criteria andImageIdLessThanOrEqualTo(Long value) {
             addCriterion("image_id <=", value, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdIn(List<Integer> values) {
+        public Criteria andImageIdIn(List<Long> values) {
             addCriterion("image_id in", values, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdNotIn(List<Integer> values) {
+        public Criteria andImageIdNotIn(List<Long> values) {
             addCriterion("image_id not in", values, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdBetween(Integer value1, Integer value2) {
+        public Criteria andImageIdBetween(Long value1, Long value2) {
             addCriterion("image_id between", value1, value2, "imageId");
             return (Criteria) this;
         }
 
-        public Criteria andImageIdNotBetween(Integer value1, Integer value2) {
+        public Criteria andImageIdNotBetween(Long value1, Long value2) {
             addCriterion("image_id not between", value1, value2, "imageId");
             return (Criteria) this;
         }

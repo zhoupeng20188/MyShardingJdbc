@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.myshardingjdbc.mapper.TImageMapper">
   <resultMap id="BaseResultMap" type="com.example.myshardingjdbc.entity.TImage">
-    <id column="image_id" jdbcType="INTEGER" property="imageId" />
+    <id column="image_id" jdbcType="BIGINT" property="imageId" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="small_image" jdbcType="VARCHAR" property="smallImage" />
     <result column="path" jdbcType="VARCHAR" property="path" />
@@ -90,15 +90,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from t_image
-    where image_id = #{imageId,jdbcType=INTEGER}
+    where image_id = #{imageId,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_image
-    where image_id = #{imageId,jdbcType=INTEGER}
+    where image_id = #{imageId,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.example.myshardingjdbc.entity.TImageExample">
     delete from t_image
@@ -108,11 +108,11 @@
   </delete>
   <insert id="insert" parameterType="com.example.myshardingjdbc.entity.TImage"
           useGeneratedKeys="true" keyProperty="imageId">
-    insert into t_image (image_id, title, small_image, 
+    insert into t_image (title, small_image,
       path, create_user, create_time, 
       update_user, update_time, is_delete, 
       is_enable)
-    values (#{imageId,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{smallImage,jdbcType=VARCHAR}, 
+    values (#{title,jdbcType=VARCHAR}, #{smallImage,jdbcType=VARCHAR},
       #{path,jdbcType=VARCHAR}, #{createUser,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateUser,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=CHAR}, 
       #{isEnable,jdbcType=CHAR})
@@ -153,7 +153,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="imageId != null">
-        #{imageId,jdbcType=INTEGER},
+        #{imageId,jdbcType=BIGINT},
       </if>
       <if test="title != null">
         #{title,jdbcType=VARCHAR},
@@ -194,7 +194,7 @@
     update t_image
     <set>
       <if test="record.imageId != null">
-        image_id = #{record.imageId,jdbcType=INTEGER},
+        image_id = #{record.imageId,jdbcType=BIGINT},
       </if>
       <if test="record.title != null">
         title = #{record.title,jdbcType=VARCHAR},
@@ -230,7 +230,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update t_image
-    set image_id = #{record.imageId,jdbcType=INTEGER},
+    set image_id = #{record.imageId,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
       small_image = #{record.smallImage,jdbcType=VARCHAR},
       path = #{record.path,jdbcType=VARCHAR},
@@ -275,7 +275,7 @@
         is_enable = #{isEnable,jdbcType=CHAR},
       </if>
     </set>
-    where image_id = #{imageId,jdbcType=INTEGER}
+    where image_id = #{imageId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.example.myshardingjdbc.entity.TImage">
     update t_image
@@ -288,6 +288,6 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       is_delete = #{isDelete,jdbcType=CHAR},
       is_enable = #{isEnable,jdbcType=CHAR}
-    where image_id = #{imageId,jdbcType=INTEGER}
+    where image_id = #{imageId,jdbcType=BIGINT}
   </update>
 </mapper>

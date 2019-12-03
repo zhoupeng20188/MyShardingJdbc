@@ -3,7 +3,7 @@ package com.example.myshardingjdbc.entity;
 import java.util.Date;
 
 public class TImage {
-    private Integer imageId;
+    private Long imageId;
 
     private String title;
 
@@ -23,28 +23,11 @@ public class TImage {
 
     private String isEnable;
 
-    public TImage(Integer imageId, String title, String smallImage, String path, Integer createUser, Date createTime, Integer updateUser, Date updateTime, String isDelete, String isEnable) {
-        this.imageId = imageId;
-        this.title = title;
-        this.smallImage = smallImage;
-        this.path = path;
-        this.createUser = createUser;
-        this.createTime = createTime;
-        this.updateUser = updateUser;
-        this.updateTime = updateTime;
-        this.isDelete = isDelete;
-        this.isEnable = isEnable;
-    }
-
-    public TImage() {
-        super();
-    }
-
-    public Integer getImageId() {
+    public Long getImageId() {
         return imageId;
     }
 
-    public void setImageId(Integer imageId) {
+    public void setImageId(Long imageId) {
         this.imageId = imageId;
     }
 
