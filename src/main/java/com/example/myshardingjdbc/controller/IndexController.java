@@ -154,7 +154,7 @@ public class IndexController {
 
     @RequestMapping("/test")
     public Object test(){
-        return tImageMapper.selectByPrimaryKey(1472251);
+        return tImageMapper.selectByPrimaryKey(513306366660575233L);
     }
 
     @RequestMapping("/test2")

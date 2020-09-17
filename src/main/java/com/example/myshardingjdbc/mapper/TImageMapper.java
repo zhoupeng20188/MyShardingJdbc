@@ -21,7 +21,7 @@ public interface TImageMapper {
 
     List<TImage> selectByExample(TImageExample example);
 
-    TImage selectByPrimaryKey(Integer imageId);
+    TImage selectByPrimaryKey(Long imageId);
 
     int updateByPrimaryKeySelective(TImage record);
 
